@@ -1,0 +1,12 @@
+#outer-container{
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 680px 1240px;
+    gap: 5px;
+}
+.top-bar{
+    grid-area: 1/1/2/2;
+}
+.image{
+    grid-area: 1/2/2/3;
+}
