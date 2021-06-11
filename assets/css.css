@@ -5,14 +5,16 @@
     url("..assets/fonts/ArialRegular/ArialRegular.ttf") format("ttf"),
     url("..assets/fonts/ArialRegular/ArialRegular.eot") format("eot");
     font-weight: normal;
+    font-weight: 400;
 }
 @font-face {
     font-family: "Georgia";
     src: local(''),
-    url("..assets/fonts/Georgia/Georgia.woff") format("woff"),
+    /* url("..assets/fonts/Georgia/Georgia.woff") format("woff"), */
     url("..assets/fonts/Georgia/Georgia.ttf") format("ttf"),
     url("..assets/fonts/Georgia/Georgia.eot") format("eot");
     font-weight: normal;
+    font-weight: 400;
 }
 html{
     box-sizing: border-box;
@@ -23,21 +25,51 @@ html{
 body{
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
-.outer-container{
+#outer-container{
     display:grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 35.417% 64.583%;
-    gap: 5px;
+    grid-template-rows: 539px 70px 663px;
+    /* grid-template-rows: 1fr; */
+    grid-template-columns: 35.417% 4.323% 60.26%;
 }
 .top-bar{
     grid-area: 1/1/2/2;
-    height: 100vh;
     background-color:aqua;
 }
-.image{
+/* form{
+    grid-area: 2/1/3/3;
+    background-color: white;
+    width: auto;
+    margin: 0;
+} */
+/* .inputform{ */
+    .formsubscribe{
+    grid-area: 2/1/3/3;
+    background-color: white;
+    width: auto;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 89.122% 10.878%;
+}
+input.subscribe{
+    grid-area: 1/1/2/2;
+    width: 100%;
+    height: 100%;
+}
+button{
+    z-index: 10;
+}
+.bttn-arrow.arrow{
     grid-area: 1/2/2/3;
-    height: 100vh;
+}
+.footer{
+    grid-area: 3/1/4/2;
+}
+.image{
+    grid-area: 1/2/4/4;
+    z-index: 1;
 }
 .cover_img{
     width: 100%;
@@ -69,7 +101,18 @@ body{
     margin-bottom: 80px;
     color: rgba(0, 0, 0, 1); */
 }
-/* #arrow{
-    background: url(assets/img/ic_arrow.svg) no-repeat;
-} */
- 
+.form-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
+    width: 399px;
+    margin-bottom: 15px;
+}
+.text{
+    width: 400px;
+    line-height: 28px;
+}

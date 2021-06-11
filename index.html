@@ -10,11 +10,11 @@
        <link rel="stylesheet" href="assets/fonts/ArialRegular/ArialRegular/ArialRegular.eot">
        <link rel="stylesheet" href="assets/fonts/Georgia/Georgia.eot">
        <link rel="stylesheet" href="assets/fonts/Georgia/Georgia.ttf">
-       <link rel="stylesheet" href="assets/fonts/Georgia/Georgia.woff">
+       <!-- <link rel="stylesheet" href="assets/fonts/Georgia/Georgia.woff"> -->
     <title>Document</title>
 </head>
 <body>
-    <div class="outer-container">
+    <div id="outer-container">
         <div class="top-bar">
             <div class="menu">
                 <div class="logo">
@@ -37,25 +37,22 @@
                     </nav>
                 </div>
             </div>
-            <div class="form">
+            <div class="form-heading">
                 <div class="heading">Subscribe to newsletter</div>
                 <div class="text">Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
-                <form action="/action_page.php">
-                    <div class="container" style="background-color:white">
-                      <input type="text" placeholder="Type your email address here…" name="mail" required>
-                        <button type="submit" id="arrow">
-                            <img src="assets/img/ic_arrow.svg" alt="arrow">
-                        </button>
-                    </div>
-                      <label>
-                        <input type="checkbox" checked="checked" name="subscribe"> I agree to terms of service
-                      </label>
-                </form>
             </div>
-            <div class="footer"></div>
+        </div>
+            <form action="/action_page.php" class="formsubscribe">
+                    <input type="text" placeholder="Type your email address here…" class="subscribe" name="mail" required>
+                    <button type="submit">
+                        <img src="assets/img/ic_arrow.svg" alt="arrow" class="arrow">
+                    </button>
+            </form>
+        <div class="footer">
+            <!-- <input type="checkbox" checked="checked" name="subscribe">I agree to terms of service -->
         </div>
         <div class="image">
-                <img src="assets/img/Image.png" class ="cover_img" alt="cover">
+            <img src="assets/img/Image.png" class ="cover_img" alt="cover">
         </div>
     </div>
 </body>
