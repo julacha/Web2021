@@ -59,11 +59,24 @@ input.subscribe{
     height: 100%;
     /* margin-left: 100px; */
     margin-left: 7.69vw;
+    border:  1px solid #E3E3E4;
+    border-left: 4px solid #4066A5;
+}
+input.subscribe:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+input.subscribe::placeholder{
+font-size: 16px;
+color: #6A707B;
 }
 button{
     z-index: 10;
     width: 100%;
     height: 100%;
+    padding: 0;
+    border: none;
+    background-color: white;
 }
 .bttn-arrow.arrow{
     grid-area: 1/2/2/3;
@@ -112,21 +125,27 @@ button{
     margin-top: 0;
     display: inline-flex;
     justify-content: space-between;
-    /* width: 118px; */
+    align-items:center;
     width: 9.08vw;
+    /* width: 118px; */
+    margin-left: 4.62vw;
 }
 .name-union{
     display: flex;
-    align-items: center;  
+    align-items: center; 
+    width: 6vw;
+    height: 1.23vw;
 }
 .check{
     margin-top: 53px;
     margin-bottom: 50px;
     display: flex;
+    align-items: center;
 }
 .agreement{
    display: inline-flex;
    flex-flow:nowrap;
+   margin-left: 1.15vw;
 }
 .menu{
     display: flex;
@@ -134,14 +153,14 @@ button{
 }
 .menu-intro{
     display: flex;
-    align-items: center;
+    align-items:center;
 }
 ul.menu_list{
     /* width: 249px; */
     width: 19.15vw;
     display: flex;
-    /* justify-content: space-between;
-    margin-right: 30px; */
+    justify-content: space-around;
+    margin-right: 30px;
     margin-right: 2.31vw;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -172,6 +191,8 @@ ul.menu_list{
     /* width: 399px; */
     width: 30.69vw;
     margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
 }
 .form_mobile{
     display:none;
@@ -180,6 +201,8 @@ ul.menu_list{
     /* width: 400px; */
     width: 30.77vw;
     line-height: 28px;
+    display: flex;
+    justify-content: center;
 }
 .string{
     /* width: 400px; */
@@ -209,6 +232,7 @@ ul.menu_list{
     #mobile-container{
         display: grid;
         width: 100%;
+        height: 100vh;
         background-image: url(../assets/img/Image.png);
         background-size: cover;
         background-repeat: no-repeat;
@@ -230,6 +254,7 @@ ul.menu_list{
     .menu-intro{
         margin-top: 21px;
         font-size: 3.73vw;
+        margin-left: 27.73vw;
     }
     ul.menu_list {
         margin-right: 5.33vw;
@@ -244,20 +269,47 @@ ul.menu_list{
         background-color: white;
         width: 89.33vw;
     }
-    .heading {
+    .heading-mob {
         font-size: 6.40vw;
         width: 78.67vw;
+        margin-left: 5.33vw;
+        margin-top: 30px;
     }
-    .text {
+    .text-mob {
         width: 78.67vw;
         line-height: 26px;
         font-size: 3.73vw;
+        margin-left: 5.33vw;
+        margin-top:10px;
     }
     .form_mobile{
         grid-area: 4/2/5/3;
         background-color: white;
         display: flex;
         width: 89.33vw;
+    }
+    input.subscribe-mobile{
+        border:  1px solid #E3E3E4;
+        border-left: 4px solid #4066A5;
+        border-right: none;
+        margin-left: 5.33vw;
+    }
+    input.subscribe-mobile:focus {
+        outline: 0;
+        outline-offset: 0;
+    }
+    input.subscribe-mobile::placeholder{
+    font-size: 16px;
+    color: #6A707B;
+    }
+    button{
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        border:  1px solid #E3E3E4;
+        background-color: white;
+        border-left:none;
     }
     .footer_mobile{
         grid-area: 5/2/6/3;
@@ -270,7 +322,9 @@ ul.menu_list{
         display: flex;
     }
     .ckeckterms {
-        margin-left: 20px;
+        /* margin-left: 20px; */
+        width: 26px;
+        height: 26px;
     }
     .string{
         width: 78.67vw;
