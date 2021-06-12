@@ -199,10 +199,12 @@ ul.menu_list{
 }
 .text{
     /* width: 400px; */
-    width: 30.77vw;
+    /* width: 30.77vw; */
     line-height: 28px;
+    margin-left: 10.77vw;
+    margin-right: 10.77vw;
     display: flex;
-    justify-content: center;
+
 }
 .string{
     /* width: 400px; */
@@ -254,7 +256,6 @@ ul.menu_list{
     .menu-intro{
         margin-top: 21px;
         font-size: 3.73vw;
-        margin-left: 27.73vw;
     }
     ul.menu_list {
         margin-right: 5.33vw;
