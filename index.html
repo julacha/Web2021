@@ -10,7 +10,8 @@
        <link rel="stylesheet" href="assets/fonts/ArialRegular/ArialRegular/ArialRegular.eot">
        <link rel="stylesheet" href="assets/fonts/Georgia/Georgia.eot">
        <link rel="stylesheet" href="assets/fonts/Georgia/Georgia.ttf">
-       <!-- <link rel="stylesheet" href="assets/fonts/Georgia/Georgia.woff"> -->
+       <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+       <script src="script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -43,19 +44,24 @@
                 <div class="heading">Subscribe to newsletter</div>
                 <div class="text">Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
             </div> <!--form-heading close-->
-            <form action="/action_page.php" id="formsubscribe">
-                    <input type="text" placeholder="Type your email address here…" class="subscribe" name="mail" required>
-                    <button type="submit">
-                        <img src="assets/img/ic_arrow.svg" alt="arrow" class="arrow">
-                    </button>
+            <form action="action.php" v-if="!submit" onsubmit="request.bind(this)(event)" id="formsubscribe" method="POST">
+                <input type="text" placeholder="Type your email address here…" class="subscribe" name="email" required>
+                <button type="submit">
+                    <img src="assets/img/ic_arrow.svg" alt="arrow" class="arrow">
+                </button>
+                <div class="check">
+                    <input type="checkbox" checked="checked" name="subscription" class="ckeckterms">
+                        <div class="agreement"> 
+                            <div class="light">I agree to</div>&nbsp;
+                            <div class="underline">terms of service</div>
+                        </div>
+                </div> <!--check close-->
             </form> <!--formsubscribe close-->
-            <div id="check">
-                <input type="checkbox" checked="checked" name="subscribe" class="ckeckterms">
-                    <div class="agreement"> 
-                        <div class="light">I agree to</div>&nbsp;
-                        <div class="underline">terms of service</div>
-                    </div>
-            </div> <!--check close-->
+            <div id="form-end" v-if="submit">
+                <div class="logo-end"><img src="assets/img/ic_success.svg" class="logo-cup" alt="cup"></div>
+                <div class="heading-end">Thanks for subscribing!</div>
+                <div class="text-end">You have successfully subscribed to our email listing. Check your email for the discount code.</div>
+            </div> <!--form-end close-->
             <div id="footer">
                 <div class="center">
                     <div class="string"></div>
@@ -75,7 +81,7 @@
         </div>
     </div>
     <div id="mobile-container">
-        <div class="top-mobile">
+        <div id="top-mobile">
             <div class="menu">
                 <div class="logo">
                     <img src="assets/img/Union.png" class="logo-union" alt="logo">
@@ -96,18 +102,18 @@
                     </nav>
                 </div>
             </div>
-        </div>
-        <div class="heading-mobile">
+        </div><!--top-mobile close-->
+        <div id="heading-mobile">
             <div class="heading-mob">Subscribe to newsletter</div>
             <div class="text-mob">Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
-        </div>
-        <form action="/action_page.php" class="form_mobile">
+        </div><!--heading-mobile close-->
+        <form action="action.php" onsubmit="request.bind(this)(event)" id="form_mobile" method="POST">
             <input type="text" placeholder="Type your email address here…" class="subscribe-mobile" name="mail" required>
             <button type="submit">
                 <img src="assets/img/ic_arrow.svg" alt="arrow" class="arrow">
             </button>
-        </form>
-        <div class="footer_mobile">
+        </form> <!--form_mobile close-->
+        <div id="footer_mobile">
             <div class="check">
                 <input type="checkbox" checked="checked" name="subscribe" class="ckeckterms">
                     <div class="agreement"> 
