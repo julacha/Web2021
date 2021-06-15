@@ -44,9 +44,9 @@
                 <div class="heading">Subscribe to newsletter</div>
                 <div class="text">Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
             </div> <!--form-heading close-->
-            <form action="action.php" v-if="!submit" v-show="show" onsubmit="request.bind(this)(event)" id="formsubscribe" method="POST">
+            <form action="action.php" v-if="!submit" v-if="visible" onsubmit="request.bind(this)(event)" id="formsubscribe" method="POST">
                 <input type="text" placeholder="Type your email address here…" class="subscribe" name="email" required>
-                <button type="submit" v-on:click="show = !show">
+                <button type="submit" @click="visible=!visible">
                     <img src="assets/img/ic_arrow.svg" alt="arrow" class="arrow">
                 </button>
                 <div class="check">

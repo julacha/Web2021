@@ -3,7 +3,12 @@ let app = new Vue({
     data: {
       email: "",
       submit: "",
-      show: true
+      visible:true
+    },
+    methods:{
+      hidden(){
+        this.visible = false;
+      }
     }
   });
 
