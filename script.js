@@ -3,6 +3,7 @@ let app = new Vue({
     data: {
       email: "",
       submit: "",
+      show: true
     }
   });
 
