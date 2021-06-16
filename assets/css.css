@@ -170,6 +170,10 @@ input.subscribe{
 input.subscribe:focus {
     outline: 0;
     outline-offset: 0;
+    background-color: white;
+}
+input.subscribe:active {
+background-color: white;
 }
 input.subscribe::placeholder{
     font-size: 1.23vw;
@@ -261,6 +265,10 @@ button .arrow{
 .icon:last-child{
     margin-right: 0;
 }
+#end-mobile{
+    grid-area: 3/2/4/3;
+    background-color: white;
+}
 #mobile{
     display: none;
 }
@@ -278,22 +286,23 @@ button .arrow{
         background-image: url(../assets/img/Image.png);
         background-size: cover;
         background-repeat: no-repeat;
-        grid-template-rows: 66px 188px 146px 60px 165px 187px;
+        grid-template-rows: 66px 188px 274px 97px 187px;
         grid-template-columns: 1fr 1fr 1fr;
     }
     #top-mobile{
         grid-area: 1/1/2/4;
         background-color: white; 
     }
-    .menu{
-       display: inline-flex;
+    .menu-mob{
+       display: flex;
+       justify-content: space-between;
     }
     .logo{
         margin-top: 10px;
         margin-left: 5.33vw;
         width: fit-content;
     }
-    .menu-intro{
+    .menu-intromob{
         margin-top: 21px;
         font-size: 3.73vw;
     }
@@ -305,8 +314,16 @@ button .arrow{
     .name-union{
         display:none;
     }
-    #heading-mobile{
+
+    #form_mobile{
         grid-area: 3/2/4/3;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr 49px;
+        grid-template-rows: 146px 60px 68px;
+    }
+    .heading-mobile{
+        grid-area: 1/1/2/3;
         background-color: white;
         width: 89.33vw;
     }
@@ -323,12 +340,6 @@ button .arrow{
         margin-left: 5.33vw;
         margin-top:10px;
     }
-    #form_mobile{
-        grid-area: 4/2/5/3;
-        background-color: white;
-        display: flex;
-        width: 89.33vw;
-    }
     input.subscribe-mobile{
         border:  1px solid #E3E3E4;
         border-left: 4px solid #4066A5;
@@ -336,6 +347,7 @@ button .arrow{
         margin-left: 5.33vw;
         width: 100%;
         height: 100%;
+        grid-area: 2/1/3/2;
     }
     input.subscribe-mobile:focus {
         outline: 0;
@@ -353,21 +365,45 @@ button .arrow{
         border:  1px solid #E3E3E4;
         background-color: white;
         border-left:none;
-    }
-    #footer_mobile{
-        grid-area: 5/2/6/3;
-        background-color: white;
-        width: 89.33vw;
+        grid-area: 2/2/3/3;
     }
     .check {
         margin-top: 20px;
         margin-bottom: 20px;
         display: flex;
+        grid-area: 3/1/4/3;
     }
     .ckeckterms {
         /* margin-left: 20px; */
         width: 26px;
         height: 26px;
+    }
+    .arrow-mob{
+        width: 24px;
+        height: 14px;
+    }
+    .light-mob{
+        font-size: 16px;
+        line-height: 28px;
+        color:#6A707B;
+    }
+    .underline-mob{
+        font-size: 16px;
+        line-height: 28px;
+        text-decoration: underline;
+    }
+    .icon-mob{
+        width: 46px;
+        height: 46px;
+        margin-right: 2.67vw;
+    }
+    .icon-mob:last-child{
+        margin-right: 0;
+    }
+    #footer_mobile{
+        grid-area: 4/2/5/3;
+        background-color: white;
+        /* width: 89.33vw; */
     }
     .string{
         width: 78.67vw;

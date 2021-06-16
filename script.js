@@ -16,6 +16,7 @@ function request(e) {
     e.preventDefault();
   
     app.submit = "success";
+    appmob.submit = "success";
     let method = this.getAttribute("method"),
       action = this.getAttribute("action"),
       data = [];
@@ -37,27 +38,16 @@ function request(e) {
     xhttp.send(data.join("&"));
   }
   
-
-// const app = new Vue({
-//   el:'#outer-container',
-//   data:{
-//     email:null,
-//   },
-//   methods:{
-//     checkForm:function(e) {
-//         e.preventDefault();
-//       this.errors = [];
-//       if(!this.email) {
-//         this.errors.push("Email required.");
-//       } else if(!this.validEmail(this.email)) {
-//         this.errors.push("Valid email required.");        
-//       }
-//       if(!this.errors.length) return true;
-//       e.preventDefault();
-//     },
-//     validEmail:function(email) {
-//       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//     return re.test(email);
-//     }
-//   }
-// })
+  let appmob= new Vue({
+    el: "#mobile-container",
+    data: {
+      email: "",
+      submit: "",
+      visible:true
+    },
+    methods:{
+      hidden(){
+        this.visible = false;
+      }
+    }
+  });

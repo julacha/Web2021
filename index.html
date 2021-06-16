@@ -82,11 +82,11 @@
     </div>
     <div id="mobile-container">
         <div id="top-mobile">
-            <div class="menu">
+            <div class="menu-mob">
                 <div class="logo">
-                    <img src="assets/img/Union.png" class="logo-union" alt="logo">
+                    <img src="assets/img/Union.png" class="union-mob" alt="logo">
                 </div>
-                <div class="menu-intro">
+                <div class="menu-intromob">
                     <nav>
                         <ul class="menu_list">
                             <li>
@@ -103,31 +103,36 @@
                 </div>
             </div>
         </div><!--top-mobile close-->
-        <div id="heading-mobile">
-            <div class="heading-mob">Subscribe to newsletter</div>
-            <div class="text-mob">Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
-        </div><!--heading-mobile close-->
-        <form action="action.php" onsubmit="request.bind(this)(event)" id="form_mobile" method="POST">
+        <form action="action.php" v-if="!submit" v-if="visible" onsubmit="request.bind(this)(event)" id="form_mobile" method="POST">
+            <div id="heading-mobile">
+                <div class="heading-mob">Subscribe to newsletter</div>
+                <div class="text-mob">Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
+            </div><!--heading-mobile close-->
             <input type="text" placeholder="Type your email address here…" class="subscribe-mobile" name="mail" required>
-            <button type="submit">
-                <img src="assets/img/ic_arrow.svg" alt="arrow" class="arrow">
+            <button type="submit" class="bttn-mob" @click="visible=!visible">
+                <img src="assets/img/ic_arrow.svg" alt="arrow" class="arrow-mob">
             </button>
-        </form> <!--form_mobile close-->
-        <div id="footer_mobile">
             <div class="check">
                 <input type="checkbox" checked="checked" name="subscribe" class="ckeckterms">
                     <div class="agreement"> 
-                        <div class="light">I agree to</div>&nbsp;
-                        <div class="underline">terms of service</div>
+                        <div class="light-mob">I agree to</div>&nbsp;
+                        <div class="underline-mob">terms of service</div>
                     </div>
             </div>
+        </form> <!--form_mobile close-->
+        <div id="end-mobile" v-if="submit">
+            <div class="logo-end"><img src="assets/img/ic_success.svg" class="logo-cup" alt="cup"></div>
+            <div class="heading-end">Thanks for subscribing!</div>
+            <div class="text-end">You have successfully subscribed to our email listing. Check your email for the discount code.</div>
+        </div> <!--end close-->
+        <div id="footer_mobile">
             <div class="center">
                 <div class="string"></div>
                 <div class="icons">
-                    <img src="assets/img/Facebook.png" class="icon" alt="facebook-logo">
-                    <img src="assets/img/Instagram.png" class="icon"alt="instagram-logo">
-                    <img src="assets/img/Twitter.png" class="icon"alt="twitter-logo">
-                    <img src="assets/img/Youtube.png" class="icon" alt="youtube-logo">
+                    <img src="assets/img/Facebook.png" class="icon-mob" alt="facebook-logo">
+                    <img src="assets/img/Instagram.png" class="icon-mob"alt="instagram-logo">
+                    <img src="assets/img/Twitter.png" class="icon-mob"alt="twitter-logo">
+                    <img src="assets/img/Youtube.png" class="icon-mob" alt="youtube-logo">
                 </div>
             </div>
         </div>
