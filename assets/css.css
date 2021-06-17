@@ -151,15 +151,6 @@ ul.menu_list{
     font-size: 2.46vw;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
-.heading-endmob{
-    font-size: 24px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-}
-.text-endmob{
-    font-size: 14px;
-    line-height: 26px;
-    color: #6A707B;
-}
 .text-end{
     margin-left: 7.69vw;
     margin-right: 7.69vw;
@@ -174,19 +165,20 @@ input.subscribe{
     border:  1px solid #E3E3E4;
     border-right: none;
     border-left: 4px solid #4066A5;
-    background-color: white;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 input.subscribe:focus {
     outline: 0;
     outline-offset: 0;
-    background-color: white;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 input.subscribe:active {
-background-color: white;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 input.subscribe::placeholder{
     font-size: 1.23vw;
     color: #6A707B;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 button{
     grid-area: 2/2/3/3;
@@ -278,7 +270,6 @@ button .arrow{
     grid-area: 3/2/4/3;
     background-color: white;
     flex-direction: column;
-    align-items: center;
     display: flex;
 }
 #mobile{
@@ -311,6 +302,7 @@ button .arrow{
     }
     .logo{
         margin-top: 10px;
+        margin-bottom: 16px;
         margin-left: 5.33vw;
         width: fit-content;
     }
@@ -320,8 +312,10 @@ button .arrow{
         margin-bottom: 39px;
     }
     .menu-intromob{
-        margin-top: 21px;
+        /* margin-top: 21px; */
         font-size: 3.73vw;
+        display: flex;
+    align-items: center;
     }
     ul.menu_list {
         margin-right: 5.33vw;
@@ -336,8 +330,9 @@ button .arrow{
         grid-area: 3/2/4/3;
         background-color: white;
         display: grid;
-        grid-template-columns: 1fr 49px;
+        grid-template-columns:262px 49px;
         grid-template-rows: 146px 60px 68px;
+        width: 89.33vw;
     }
     .heading-mobile{
         grid-area: 1/1/2/3;
@@ -349,6 +344,23 @@ button .arrow{
         width: 78.67vw;
         margin-left: 5.33vw;
         margin-top: 30px;
+    }
+    .logo-endmob{
+        margin-left: 5.33vw;
+        margin-top: 8vw;
+    }
+    .heading-endmob{
+        font-size: 24px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        margin-left: 5.33vw;
+        margin-bottom: 10px;
+    }
+    .text-endmob{
+        font-size: 14px;
+        line-height: 26px;
+        color: #6A707B;
+        margin-left: 5.33vw;
+        margin-right: 5.33vw;
     }
     .text-mob {
         width: 78.67vw;
@@ -362,7 +374,6 @@ button .arrow{
         border-left: 4px solid #4066A5;
         border-right: none;
         margin-left: 5.33vw;
-        width: 100%;
         height: 100%;
         grid-area: 2/1/3/2;
     }
@@ -374,15 +385,18 @@ button .arrow{
         font-size:16px;
         color: #6A707B;
     }
-    button{
+    input[type="text"] {
+        background-color: white;
+    }
+    .bttn-mob{
         z-index: 10;
-        width: 100%;
         height: 100%;
         padding: 0;
         border:  1px solid #E3E3E4;
         background-color: white;
         border-left:none;
         grid-area: 2/2/3/3;
+        margin-right:5.33vw;
     }
     .check {
         margin-top: 20px;
@@ -398,6 +412,7 @@ button .arrow{
     .arrow-mob{
         width: 24px;
         height: 14px;
+        margin-right: 5.33vw;
     }
     .light-mob{
         font-size: 16px;

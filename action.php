@@ -17,3 +17,15 @@ if (count($values) === 2) {
 }
 
 echo json_encode($output);
+
+include('assets/config/db_conn.php');
+$email = mysqli_real_escape_string($conn, $_POST['email']);
+
+
+$sql = "INSERT INTO users (email) VALUES ('$email')";
+
+if (mysqli_query($conn, $sql)) {
+    echo "Success";
+} else {
+    echo 'query error:' . mysqli_error($conn);
+}
