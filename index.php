@@ -16,8 +16,6 @@
       <link rel="stylesheet" href="assets/fonts/Georgia/Georgia.eot">
       <link rel="stylesheet" href="assets/fonts/Georgia/Georgia.ttf">
       <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-      <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-      <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
       <script src="script.js" defer></script>
       <title>Document</title>
   </head>
@@ -49,15 +47,15 @@
               </div>
           </div>
           <!--top-bar close-->
-          <form action="action.php" v-if="!submit" v-if="visible" onsubmit="request.bind(this)(event)" id="formsubscribe" class="tooltip" method="POST" @submit="checkForm">
+          <form action="action.php" v-if="!submit" v-if="visible" onsubmit="request.bind(this)(event)" id="formsubscribe" method="POST" @submit="checkForm" novalidate="true">
               <div class="form-heading">
                   <div class="heading">Subscribe to newsletter</div>
                   <div class="text">Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
               </div>
               <!--form-heading close-->
               <input type="text" placeholder="Type your email address here…" v-model="email" id="email" class="subscribe tooltip" name="email" required>
-              <span v-if="errors.length" class="tooltiptext">
-                  <p v-for="error in errors">{{ error }}dddd</p>
+              <span v-show="errors.length" class="tooltiptext">
+                  <p v-for="error in errors">{{ error }}</p>
               </span>
               <button type="submit" @click="visible=!visible">
                   <img src="assets/img/ic_arrow.svg" alt="arrow" class="arrow">
