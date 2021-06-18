@@ -166,19 +166,19 @@ input.subscribe{
     border-right: none;
     border-left: 4px solid #4066A5;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    position: relative;
 }
 input.subscribe:focus {
     outline: 0;
     outline-offset: 0;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: white;
 }
 input.subscribe:active {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: white;
 }
 input.subscribe::placeholder{
     font-size: 1.23vw;
     color: #6A707B;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 button{
     grid-area: 2/2/3/3;
@@ -195,11 +195,24 @@ button .arrow{
     width: 1.85vw;
     height: auto;
 }
-/* .footer{
-    grid-area: 3/1/4/2;
-    width: 100%;
-    height: 100%;
-} */
+.tooltip {
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(138, 85, 85);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    z-index: 1;
+    position: absolute;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
 .check{
     grid-area: 3/1/4/2;
     display:flex;
