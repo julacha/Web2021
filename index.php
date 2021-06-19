@@ -54,8 +54,8 @@
               </div>
               <!--form-heading close-->
               <input type="text" placeholder="Type your email address here…" v-model="email" id="email" class="subscribe tooltip" name="email" required>
-              <span v-show="errors.length" class="tooltiptext">
-                  <p v-for="error in errors">{{ error }}</p>
+              <span v-if="errors.length" class="tooltiptext">
+                  <p v-for="error in errors">{{error}}</p>
               </span>
               <button type="submit" @click="visible=!visible">
                   <img src="assets/img/ic_arrow.svg" alt="arrow" class="arrow">

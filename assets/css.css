@@ -298,7 +298,6 @@ button .arrow{
     #mobile-container{
         display: grid;
         width: 100%;
-        height: 100vh;
         background-image: url(../assets/img/Image.png);
         background-size: cover;
         background-repeat: no-repeat;
@@ -343,8 +342,8 @@ button .arrow{
         grid-area: 3/2/4/3;
         background-color: white;
         display: grid;
-        grid-template-columns:262px 49px;
-        grid-template-rows: 146px 60px 68px;
+        grid-template-columns:79.403% 20.597%;
+        grid-template-rows: 38.93vw 16vw 18.13vw;
         width: 89.33vw;
     }
     .heading-mobile{
@@ -357,6 +356,7 @@ button .arrow{
         width: 78.67vw;
         margin-left: 5.33vw;
         margin-top: 30px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
     }
     .logo-endmob{
         margin-left: 5.33vw;
@@ -381,13 +381,14 @@ button .arrow{
         font-size: 3.73vw;
         margin-left: 5.33vw;
         margin-top:10px;
+        color: #6A707B;
     }
     input.subscribe-mobile{
         border:  1px solid #E3E3E4;
         border-left: 4px solid #4066A5;
         border-right: none;
         margin-left: 5.33vw;
-        height: 100%;
+        /* height: 100%; */
         grid-area: 2/1/3/2;
     }
     input.subscribe-mobile:focus {
@@ -395,7 +396,7 @@ button .arrow{
         outline-offset: 0;
     }
     input.subscribe-mobile::placeholder{
-        font-size:16px;
+        font-size:4.27vw;
         color: #6A707B;
     }
     input[type="text"] {
@@ -412,8 +413,8 @@ button .arrow{
         margin-right:5.33vw;
     }
     .check {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 5.33vw;
+        margin-bottom: 5.33vw;
         display: flex;
         grid-area: 3/1/4/3;
     }
@@ -423,18 +424,18 @@ button .arrow{
         height: 26px;
     }
     .arrow-mob{
-        width: 24px;
-        height: 14px;
+        width: 6.40vw;
+        height: 3.73vw;
         margin-right: 5.33vw;
     }
     .light-mob{
-        font-size: 16px;
-        line-height: 28px;
+        font-size: 4.27vw;
+        line-height: 7.47vw;
         color:#6A707B;
     }
     .underline-mob{
-        font-size: 16px;
-        line-height: 28px;
+        font-size: 4.27vw;
+        line-height: 7.47vw;
         text-decoration: underline;
     }
     .icon-mob{
