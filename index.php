@@ -15,7 +15,8 @@
       <link rel="stylesheet" href="assets/fonts/ArialRegular/ArialRegular/ArialRegular.eot">
       <link rel="stylesheet" href="assets/fonts/Georgia/Georgia.eot">
       <link rel="stylesheet" href="assets/fonts/Georgia/Georgia.ttf">
-      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+      <script src="vuelidate/dist/validators.min.js"></script>
+      <script src="Vendor/vue.js"></script>
       <script src="script.js" defer></script>
       <title>Document</title>
   </head>
@@ -48,14 +49,16 @@
           </div>
           <!--top-bar close-->
           <form action="action.php" v-if="!submit" v-if="visible" onsubmit="request.bind(this)(event)" id="formsubscribe" method="POST" @submit="checkForm" novalidate="true">
+              <!-- <b-form> -->
               <div class="form-heading">
                   <div class="heading">Subscribe to newsletter</div>
                   <div class="text">Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
               </div>
               <!--form-heading close-->
               <input type="text" placeholder="Type your email address here…" v-model="email" id="email" class="subscribe tooltip" name="email" required>
-              <span v-if="errors.length" class="tooltiptext">
-                  <p v-for="error in errors">{{error}}</p>
+              <span v-show="errors.length" class="tooltiptext">
+                  <!-- b-tooltip -->
+                  <p v-for="error in errors">{{ error }}</p>
               </span>
               <button type="submit" @click="visible=!visible">
                   <img src="assets/img/ic_arrow.svg" alt="arrow" class="arrow">
@@ -70,11 +73,11 @@
               <!--check close-->
           </form>
           <!--formsubscribe close-->
-          <div id="form-end" v-if="submit">
+          <form id="form-end" v-if="submit">
               <div class="logo-end"><img src="assets/img/ic_success.svg" class="logo-cup" alt="cup"></div>
               <div class="heading-end">Thanks for subscribing!</div>
               <div class="text-end">You have successfully subscribed to our email listing. Check your email for the discount code.</div>
-          </div>
+          </form>
           <!--form-end close-->
           <div id="footer">
               <div class="center">
@@ -89,10 +92,8 @@
           </div>
           <!--footer close-->
           <div id="image">
-              <!-- <img src="assets/img/Image.png" class ="cover_img" alt="cover"> -->
           </div>
           <div class="image_mobile">
-              <!-- <img src="assets/img/Image.png" class ="cover_img" alt="cover"> -->
           </div>
       </div>
       <div id="mobile-container">
@@ -120,7 +121,7 @@
           </div>
           <!--top-mobile close-->
           <form action="action.php" v-if="!submit" v-if="visible" onsubmit="request.bind(this)(event)" id="form_mobile" method="POST">
-              <div id="heading-mobile">
+              <div class="heading-mobile">
                   <div class="heading-mob">Subscribe to newsletter</div>
                   <div class="text-mob">Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
               </div>

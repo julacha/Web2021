@@ -1,10 +1,14 @@
+// import Vue from 'vue'
+// import Vuelidate from 'vuelidate'
+// Vue.use(Vuelidate)
+
 let app = new Vue({
   el: "#outer-container",
   data: {
     email: "",
     submit: "",
     visible:true,
-    errors: [],
+    errors:[],
   },
   methods:{
     hidden(){
@@ -16,7 +20,7 @@ let app = new Vue({
       if (!this.email) {
         this.errors.push('Email address is required');
       } else if (!this.validEmail(this.email)) {
-        this.errors.push('“Please provide a valid e-mail address');
+        this.errors.push('Please provide a valid e-mail address');
       }
 
       if (!this.errors.length) {

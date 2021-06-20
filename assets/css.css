@@ -49,16 +49,13 @@ body{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    /* align-items:center; */
     width: 9.08vw;
-    /* width: 118px; */
     margin-left: 4.62vw;
     align-items: flex-end;
 }
 .logo-union{
     width: 1.92vw;
     height: 3.08vw;
-    /* margin-top: 100px; */
 }
 .name-union{
     display: flex;
@@ -75,7 +72,6 @@ body{
     margin-top: 14px;
 }
 ul.menu_list{
-    /* width: 249px; */
     width: 19.15vw;
     display: flex;
     justify-content: space-around;
@@ -115,23 +111,17 @@ ul.menu_list{
 .heading{
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 2.46vw;
-    /* width: 399px; */
-    /* width: 30.69vw; */
     margin-bottom: 1.15vw;
     margin-left: 7.69vw;
 }
 .text{
-    /* width: 400px; */
     line-height: 28px;
-    /* display: flex;
-    justify-content: center; */
     margin-left: 7.69vw;
     margin-right: 7.69vw;
     color: #6A707B;
     margin-bottom: 3.85vw;
 }
 #form-end{
-    /* display: none; */
     grid-area: 2/1/3/2;
     display: flex;
     flex-direction: column;
@@ -160,7 +150,6 @@ ul.menu_list{
 input.subscribe{
     grid-area: 2/1/3/2;
     width: 100%;
-    /* margin-left: 100px; */
     margin-left: 4.62vw;
     border:  1px solid #E3E3E4;
     border-right: none;
@@ -195,29 +184,14 @@ button .arrow{
     width: 1.85vw;
     height: auto;
 }
-.tooltip {
-    display: inline-block;
-    border-bottom: 1px dotted black;
-    position: relative;
-}
-.tooltip .tooltiptext {
-    width: 220px;
-    height: 50px;
-    background-color: rgb(36, 193, 221);
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    z-index: 1;
-    position: absolute;
-}
-/* .tooltip:hover .tooltiptext {
-    visibility: visible;
-} */
+/* .validation-tooltip .tooltip-inner{
+    background-color: #dc3545;
+  }
+*/  
 .check{
     grid-area: 3/1/4/2;
     display:flex;
     align-items: center;
-    /* margin-bottom: 3.85vw; */
 }
 #footer{
     grid-area: 3/1/4/2;
@@ -228,7 +202,6 @@ button .arrow{
     align-items: center;
 }
 .ckeckterms{
-    /* margin-left: 140px; */
     margin-left: 10.77vw;
 }
 .light{
@@ -248,12 +221,6 @@ button .arrow{
     background-repeat: no-repeat;
     z-index: 1;
 }
-/* .cover_img{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
-} */
 .agreement{
    display: inline-flex;
    flex-flow:nowrap;
@@ -263,15 +230,12 @@ button .arrow{
     display:none;
 }
 .string{
-    /* width: 400px; */
     width: 30.77vw;
     height: 1px;
     background-color:#E3E3E4; ;
     margin-bottom: 3.85vw;
-    /* margin-top: 3.85vw; */
 }
 .icon{
-    /* margin-right: 20px; */
     margin-right: 1.54vw;
     width: 3.54vw;
     height: auto;
@@ -327,7 +291,7 @@ button .arrow{
         /* margin-top: 21px; */
         font-size: 3.73vw;
         display: flex;
-    align-items: center;
+        align-items: center;
     }
     ul.menu_list {
         margin-right: 5.33vw;
@@ -337,19 +301,19 @@ button .arrow{
     .name-union{
         display:none;
     }
-
     #form_mobile{
         grid-area: 3/2/4/3;
         background-color: white;
         display: grid;
         grid-template-columns:79.403% 20.597%;
-        grid-template-rows: 38.93vw 16vw 18.13vw;
+        grid-template-rows: 53.285% 21.898% 24.817%;
         width: 89.33vw;
     }
     .heading-mobile{
         grid-area: 1/1/2/3;
         background-color: white;
         width: 89.33vw;
+        height: 38.93vw;
     }
     .heading-mob {
         font-size: 6.40vw;
@@ -419,7 +383,6 @@ button .arrow{
         grid-area: 3/1/4/3;
     }
     .ckeckterms {
-        /* margin-left: 20px; */
         width: 26px;
         height: 26px;
     }
@@ -439,8 +402,8 @@ button .arrow{
         text-decoration: underline;
     }
     .icon-mob{
-        width: 46px;
-        height: 46px;
+        width: 12.27vw;
+        height: 12.27vw;
         margin-right: 2.67vw;
     }
     .icon-mob:last-child{

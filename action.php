@@ -9,7 +9,6 @@ $values = array_intersect_key($_POST, array_flip(['email', 'subscription']));
 $output = [];
 
 if (count($values) === 2) {
-    //print_r($values);
     file_put_contents('data/' . $values['email'] . '.json', json_encode($values));
     $output['message'] = $values['email'] . " preferences has been set up";
 } else {

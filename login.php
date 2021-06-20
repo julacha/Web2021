@@ -17,4 +17,3 @@ if (isset($post['login'])) {
         echo "Login Not Successful";
     }
 }
-//header('Location: /');
