@@ -11,7 +11,6 @@
       <link rel="stylesheet" href="assets/fonts/ArialRegular/ArialRegular/ArialRegular.eot">
       <link rel="stylesheet" href="assets/fonts/Georgia/Georgia.eot">
       <link rel="stylesheet" href="assets/fonts/Georgia/Georgia.ttf">
-      <script src="vuelidate/dist/validators.min.js"></script>
       <script src="Vendor/vue.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.21.2/bootstrap-vue.min.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.21.2/bootstrap-vue.min.css">
@@ -53,9 +52,9 @@
               </div>
               <!--form-heading close-->
               <input type="text" placeholder="Type your email address here…" v-model="email" id="email" class="subscribe" name="email" required>
-              <span id="error" class="tooltiptext">></span>
+              <span id="error"></span>
               <!-- b-tooltip -->
-              <p v-for="error in errors">{{ error }}</p>
+              <!-- <p v-for="error in errors">{{ error }}</p> -->
               </span>
               <button type="submit" @click="visible=!visible">
                   <img src="assets/img/ic_arrow.svg" alt="arrow" class="arrow">

@@ -41,8 +41,6 @@ body{
 #top-bar{
     grid-area: 1/1/2/2;
     display: flex;
-    /* flex-direction: column;
-    justify-content: space-around; */
 }
 .logo{
     margin-top: 0;
@@ -100,6 +98,9 @@ ul.menu_list{
     display: grid;
     grid-template-rows: 66.5% 11.667% 21.833%;
     grid-template-columns: 89.122% 10.878%;
+}
+#error{
+    z-index: 100;
 }
 .form-heading{
     grid-area: 1/1/2/2;
@@ -184,10 +185,6 @@ button .arrow{
     width: 1.85vw;
     height: auto;
 }
-/* .validation-tooltip .tooltip-inner{
-    background-color: #dc3545;
-  }
-*/  
 .check{
     grid-area: 3/1/4/2;
     display:flex;
@@ -308,9 +305,6 @@ button .arrow{
         grid-template-columns:79.403% 20.597%;
         grid-template-rows: 53.285% 21.898% 24.817%;
         width: 89.33vw;
-    }
-    #error{
-        z-index: 100;
     }
     .heading-mobile{
         grid-area: 1/1/2/3;
