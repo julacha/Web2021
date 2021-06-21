@@ -1,7 +1,3 @@
-  <?php
-    require_once 'login.php';
-    ?>
-
   <!DOCTYPE html>
   <html lang="en">
 
@@ -48,14 +44,15 @@
               </div>
           </div>
           <!--top-bar close-->
-          <form action="action.php" v-if="!submit" v-if="visible" onsubmit="request.bind(this)(event)" id="formsubscribe" method="POST" @submit="checkForm" novalidate="true">
+          <form action="login.php" v-if="!submit" v-if="visible" onsubmit="login.bind(this)(event)" id="formsubscribe" method="POST" @submit="checkForm" novalidate="true">
               <!-- <b-form> -->
               <div class="form-heading">
                   <div class="heading">Subscribe to newsletter</div>
                   <div class="text">Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
               </div>
               <!--form-heading close-->
-              <input type="text" placeholder="Type your email address here…" v-model="email" id="email" class="subscribe tooltip" name="email" required>
+              <input type="text" placeholder="Type your email address here…" v-model="email" id="email" class="subscribe" name="email" required>
+              <span id="error"></span>
               <span v-show="errors.length" class="tooltiptext">
                   <!-- b-tooltip -->
                   <p v-for="error in errors">{{ error }}</p>

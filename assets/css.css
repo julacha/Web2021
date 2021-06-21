@@ -309,6 +309,9 @@ button .arrow{
         grid-template-rows: 53.285% 21.898% 24.817%;
         width: 89.33vw;
     }
+    #error{
+        z-index: 100;
+    }
     .heading-mobile{
         grid-area: 1/1/2/3;
         background-color: white;
