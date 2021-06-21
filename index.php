@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="assets/fonts/Georgia/Georgia.ttf">
       <script src="vuelidate/dist/validators.min.js"></script>
       <script src="Vendor/vue.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.21.2/bootstrap-vue.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.21.2/bootstrap-vue.min.css">
       <script src="script.js" defer></script>
       <title>Document</title>
   </head>
@@ -45,17 +47,15 @@
           </div>
           <!--top-bar close-->
           <form action="login.php" v-if="!submit" v-if="visible" onsubmit="login.bind(this)(event)" id="formsubscribe" method="POST" @submit="checkForm" novalidate="true">
-              <!-- <b-form> -->
               <div class="form-heading">
                   <div class="heading">Subscribe to newsletter</div>
                   <div class="text">Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
               </div>
               <!--form-heading close-->
               <input type="text" placeholder="Type your email address here…" v-model="email" id="email" class="subscribe" name="email" required>
-              <span id="error"></span>
-              <span v-show="errors.length" class="tooltiptext">
-                  <!-- b-tooltip -->
-                  <p v-for="error in errors">{{ error }}</p>
+              <span id="error" class="tooltiptext">></span>
+              <!-- b-tooltip -->
+              <p v-for="error in errors">{{ error }}</p>
               </span>
               <button type="submit" @click="visible=!visible">
                   <img src="assets/img/ic_arrow.svg" alt="arrow" class="arrow">

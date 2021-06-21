@@ -1,7 +1,3 @@
-// import Vue from 'vue'
-// import Vuelidate from 'vuelidate'
-// Vue.use(Vuelidate)
-
 let app = new Vue({
   el: "#outer-container",
   data: {
