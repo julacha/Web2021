@@ -49,7 +49,7 @@ require_once 'login.php';
             </div>
         </div>
         <!--top-bar close-->
-        <form action="action.php" v-if="!submit" v-if="visible" onsubmit="request.bind(this)(event)" id="formsubscribe" method="POST" @submit="checkForm" novalidate="true">
+        <form action="action.php" v-if="!submit" v-if="visible" onsubmit="request.bind(this)(event)" id="formsubscribe" method="POST" novalidate="true">
             <div class="form-heading">
                 <div class="heading">Subscribe to newsletter</div>
                 <div class="text">Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
