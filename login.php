@@ -2,7 +2,6 @@
 
 include('assets/config/db_conn.php');
 
-
 $post = $_POST;
 if (isset($post['login'])) {
     // $email = $post['email'];
@@ -23,4 +22,3 @@ if (isset($post['login'])) {
         echo "Login Not Successful";
     }
 }
-0
